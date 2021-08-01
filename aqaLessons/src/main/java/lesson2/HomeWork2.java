@@ -70,13 +70,18 @@ public class HomeWork2 {
          */
 
         // Задание * (между 10 и 11 заданиями)
-        int[] mass = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
-        int max = 0;
-        int min = 0;
+        int[] mass = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 0};
+        int max = mass[0];
+        int min = mass[0];
         for (int i = 0; i < mass.length; i++) {
-
+            if (max <= mass[i]) {
+                max = mass[i];
+            }
+            if (min >= mass[i]) {
+                min = mass[i];
+            }
         }
-
+        System.out.println("max = " + max + ", min = " + min);
     }
 
     // Задание №1
