@@ -82,6 +82,11 @@ public class HomeWork2 {
             }
         }
         System.out.println("max = " + max + ", min = " + min);
+
+        int[] firstMass = {3, 2, 1, 7, -1};
+        int[] secondMass = {1, 2, 3, 4};
+        System.out.println(matchingParts(firstMass));
+        System.out.println(matchingParts(secondMass));
     }
 
     // Задание №1
@@ -123,6 +128,23 @@ public class HomeWork2 {
             return true;
         } else {
             return false;
+        }
+    }
+
+    // Задание ** (между заданием 10 и заданием 11)
+    public static boolean matchingParts(int[] mass) {
+        int sum = 0;
+        for (int i : mass) {
+            sum += i;
+        }
+        int sumRight = 0;
+        while(true) {
+            for (int j = 0; j < mass.length; j++) {
+                sumRight += mass[j];
+                if (sumRight == sum - sumRight) {
+                    return true;
+                }
+            }
         }
     }
 }
