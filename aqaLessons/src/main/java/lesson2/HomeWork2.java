@@ -87,6 +87,8 @@ public class HomeWork2 {
         int[] secondMass = {1, 2, 3, 4};
         System.out.println(matchingParts(firstMass));
         System.out.println(matchingParts(secondMass));
+        rearrangement(secondMass, 2);
+        rearrangement(firstMass, 3); // работает некорректно. Сдвиг есть, элементы массива пропадают или изменяются.
     }
 
     // Задание №1
@@ -138,13 +140,25 @@ public class HomeWork2 {
             sum += i;
         }
         int sumRight = 0;
-        while(true) {
-            for (int j = 0; j < mass.length; j++) {
-                sumRight += mass[j];
-                if (sumRight == sum - sumRight) {
-                    return true;
-                }
+        for (int i : mass) {
+            sumRight += i;
+            if (sumRight == sum - sumRight) {
+                return true;
             }
         }
+        return false;
+    }
+
+    // Задание *** (самое последнее)
+    public static void rearrangement(int[] mass, int n){
+        int[] mass1 = new int[mass.length];
+        for (int i = (mass.length - 1); i >= 0; i--) { // сдвиг вправо
+            if (i - n >= 0) {
+                mass1[i] = mass[i - n];
+                } else if (i - n < 0 && i + n < mass.length) {
+                mass1[i] = mass[i + n];
+                }
+        }
+        System.out.println(Arrays.toString(mass1));
     }
 }
