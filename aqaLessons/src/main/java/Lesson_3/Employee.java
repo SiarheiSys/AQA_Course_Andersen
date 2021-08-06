@@ -75,14 +75,5 @@ public class Employee {
         System.out.println("Имя сотрудника: " + name + "; Должность сотрудника: " + position + "; Адрес электронной почты сотрудника: " + email +
                 "; Номер телефона сотрудника: " + phoneNumber + "; Заработная плата сотрудника: " + salary + "; Возраст сотрудника: " + age);
     }
-
-// Задание 5. С помощью цикла вывести информацию только о сотрудниках старше 40 лет.
-    /* public void employeesMoreThan40() {
-        for (Employee i : MainApp.arrayEmployees) {
-            if (getAge() > 40) {
-                printEmployee();
-            }
-        }
-    }*/
 }
 
