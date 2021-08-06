@@ -1,7 +1,5 @@
 package Lesson_3;
 
-import java.util.Arrays;
-
 public class MainApp {
     public static void main(String[] args) {
         // Задание 4. Создать массив из 5 сотрудников.
@@ -13,9 +11,16 @@ public class MainApp {
         arrayEmployees[4] = new Employee("Трибутько Галина Васильевна", "Уборщица", "tributko@aqa.com", "+3750096321458", 700.00, 21);
 
         // Задание 5. С помощью цикла вывести информацию только о сотрудниках старше 40 лет.
+        /* Альтернативный цикл
         for (int i = 0; i < 5; i++) {
             if (arrayEmployees[i].getAge() > 40) {
                 arrayEmployees[i].printEmployee();
+            }
+        }
+        */
+        for (Employee i : arrayEmployees) {
+            if (i.getAge() > 40) {
+                i.printEmployee();
             }
         }
     }
