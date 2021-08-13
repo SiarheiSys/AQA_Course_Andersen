@@ -27,7 +27,5 @@ public class FruitsInBox {
         appleBox.pour(appleBox1); //приведение к ArrayList не срабатывает
         System.out.println(appleBox); // Arrays.toString(appleBox) не срабатывает. Выводится что-то не то
         System.out.println(appleBox1);// Arrays.toString(appleBox1) не срабатывает. Выводится что-то не то
-
-
     }
 }
