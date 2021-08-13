@@ -52,6 +52,4 @@ public class Box <T extends Fruit> {
     /*По логике box1 должен быть типа ArrayList <T>, но в main он типа Box. Как Box привести к типу ArrayList <T>
     фантазии не хватает.
     */
-
-
 }
