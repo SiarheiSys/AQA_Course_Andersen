@@ -1,7 +1,7 @@
 package Lesson_6;
 
 public class MainArray {
-    public static void main(String[] args) throws MyArraySizeException, MyArrayDataException {
+    public static void main(String[] args) {
         String[][] correct = {{"1", "2", "3", "4"},
                                 {"5", "6", "7", "8"},
                                 {"9", "10", "11", "12"},
