@@ -1,13 +1,14 @@
 package Lesson_7;
 
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class Output {
 
-    public void saveHeader(AppData p) {
-        try (BufferedWriter out = new BufferedWriter(new FileWriter("base.csv"))) {
+    public void saveHeader(AppData p, File file) {
+        try (BufferedWriter out = new BufferedWriter(new FileWriter(file))) {
             for (int i = 0; i < p.getHeader().length; i++) {
                 out.write(p.getHeader()[i]);
                 if (i < p.getHeader().length - 1) {
@@ -20,7 +21,7 @@ public class Output {
         }
     }
 
-    public void saveData(AppData p) {
+    public void saveData(AppData p, File file) {
         String str;
         try (BufferedWriter out = new BufferedWriter(new FileWriter("base.csv", true))) { //Если не добавить true в append,
             // то заголовок в файле затрётся

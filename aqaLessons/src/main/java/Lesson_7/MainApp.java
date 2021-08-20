@@ -7,11 +7,11 @@ public class MainApp {
         AppData header = new AppData(new String[]{"Value1", "Value2", "Value3"});
         AppData data = new AppData(new int[][]{{100, 200, 123},
                                                 {300, 400, 500}});
-        Output output = new Output();
         File file = new File("base.csv");
+        Output output = new Output();
         Input input = new Input();
-        output.saveHeader(header);
-        output.saveData(data);
+        output.saveHeader(header, file);
+        output.saveData(data, file);
         input.read(file);
     }
 }
