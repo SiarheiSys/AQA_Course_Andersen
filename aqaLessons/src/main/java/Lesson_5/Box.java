@@ -41,15 +41,8 @@ public class Box <T extends Fruit> {
     // Помним про сортировку фруктов: нельзя яблоки высыпать в коробку с апельсинами.
     // Соответственно, в текущей коробке фруктов не остается, а в другую перекидываются объекты, которые были в первой
 
-    public void pour(Box box1) {
-        //for (T fruit : getBox()) {
-            //box1.add(fruit);
-            box1.getBox().add(getBox()); // нашёл в гугле такую форму записи. Объяснения такой записи не нашел.
-                                            // box1.add(fruit) не срабатывает.
-        //}
+    public void pour(ArrayList <T> box1) {
+        box1.addAll(getBox());
         getBox().clear();
     }
-    /*По логике box1 должен быть типа ArrayList <T>, но в main он типа Box. Как Box привести к типу ArrayList <T>
-    фантазии не хватает.
-    */
 }
