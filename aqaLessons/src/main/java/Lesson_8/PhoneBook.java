@@ -32,11 +32,24 @@ public class PhoneBook {
     В итоге появляется целый список из надписей "Указанной фамилии в справочнике нет". А этого не хотелось бы. Не придумал, как
     это побороть.
     */
-    public void get(String surname) {
+    /*public void get(String surname) {
         for(Map.Entry<String, String> p : getBook().entrySet()) {
             if(surname.equals(p.getValue())) {
                 System.out.println("Вы ввели фамилию " + surname + ". По указанной фамилии найден номер телефона: " + p.getKey());
             }
+        }
+    }*/
+    public void get(String surname) {
+        if(book.containsValue(surname)){
+            for(Map.Entry<String, String> p : getBook().entrySet()) {
+                if (p.getValue().equals(surname)) {
+                    System.out.println(
+                            "Вы ввели фамилию " + surname + ". По указанной фамилии найден номер телефона: "
+                                    + p.getKey());
+                }
+            }
+        } else {
+            System.out.println("Указанной фамилии в справочнике нет");
         }
     }
 }

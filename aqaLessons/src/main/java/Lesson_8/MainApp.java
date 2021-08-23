@@ -29,5 +29,6 @@ public class MainApp {
         note.add("+375338561244", "Казачок");
         note.get("Соколов");
         note.get("Петрова");
+        note.get("Ковалёв");
     }
 }
